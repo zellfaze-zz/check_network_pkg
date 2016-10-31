@@ -1,0 +1,10 @@
+Package: check-network
+Version: 1.0-1
+Architecture: amd64
+Maintainer: Zell Faze <zellfaze@zellfaze.org>
+Installed-Size: 48
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Section: misc
+Priority: optional
+Description: Network Checker
+ Small ping monitoring utility meant to be used from XFCE panel

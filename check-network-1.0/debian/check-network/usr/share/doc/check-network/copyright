@@ -1,0 +1,19 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: check-network
+Source: https://github.com/zellfaze/check_network
+
+Files: *
+Copyright: 2016 Zell Faze <zellfaze@zellfaze.org>
+License: CC0
+
+License: CC0
+  This software has been dedicated to the public domain under the CC0
+  public domain dedication.
+  .
+  To the extent possible under law, the person who associated CC0 with
+  check-network has waived all copyright and related or neighboring rights
+  to check-network.
+  .
+  You should have received a copy of the CC0 legalcode along with this
+  work.  If not, see
+  <http://creativecommons.org/publicdomain/zero/1.0/>.

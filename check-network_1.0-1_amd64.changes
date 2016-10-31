@@ -1,0 +1,31 @@
+Format: 1.8
+Date: Mon, 31 Oct 2016 03:54:59 -0400
+Source: check-network
+Binary: check-network
+Architecture: source amd64
+Version: 1.0-1
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Zell Faze <zellfaze@zellfaze.org>
+Changed-By: Zell Faze <zellfaze@zellfaze.org>
+Description:
+ check-network - Network Checker
+Changes:
+ check-network (1.0-1) UNRELEASED; urgency=medium
+ .
+   * Initial release.
+Checksums-Sha1:
+ 28839878c3d6a57ad5bf7d999140f686a512887e 803 check-network_1.0-1.dsc
+ 76f6e2c9476cb22abbcf6ae5db3c60b1f735ee73 4052 check-network_1.0.orig.tar.gz
+ b6dac8baadf1b5f3521a08f06e425ea9d06992b7 1100 check-network_1.0-1.debian.tar.xz
+ ab8bc04eab6ee4a5aeab3ae986939f66b2ff7a20 8220 check-network_1.0-1_amd64.deb
+Checksums-Sha256:
+ 7cd83fd7bbb4cb06b8a215175511223c62134f8894555eec1e6d68b48698cff1 803 check-network_1.0-1.dsc
+ b7a81c76cab3092135286ea073063be2782b3494c94d7060eb21ea092ba7836c 4052 check-network_1.0.orig.tar.gz
+ 7eba0609a03b40ba19739ebccaf3eb1df08ddf1656f1ea3aa78b4358450013b6 1100 check-network_1.0-1.debian.tar.xz
+ fe9bb95476cfcb1bda0f9642ec9a488dbc1bdbfad237ec66c7039acba99e7a37 8220 check-network_1.0-1_amd64.deb
+Files:
+ ff1e4c812b86f5544d02b9d8f61caf9e 803 misc optional check-network_1.0-1.dsc
+ 0dad7c9c298ec913074310c44cb8c5e9 4052 misc optional check-network_1.0.orig.tar.gz
+ ff768a4556f10d6f24ad651c1a372db5 1100 misc optional check-network_1.0-1.debian.tar.xz
+ 1ef5d9644bd3a2798ff87456e66e6ef4 8220 misc optional check-network_1.0-1_amd64.deb

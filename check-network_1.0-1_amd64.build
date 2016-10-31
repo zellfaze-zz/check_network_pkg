@@ -1,0 +1,84 @@
+ dpkg-buildpackage -rfakeroot -D -us -uc
+dpkg-buildpackage: source package check-network
+dpkg-buildpackage: source version 1.0-1
+dpkg-buildpackage: source distribution UNRELEASED
+dpkg-buildpackage: source changed by Zell Faze <zellfaze@zellfaze.org>
+ dpkg-source --before-build check-network-1.0
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+make[1]: Entering directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+rm -f obj/Debug/main.o bin/Debug/check_network
+rm -rf bin/Debug
+rm -rf obj/Debug
+rm -f obj/Release/main.o bin/Release/check_network
+rm -rf bin/Release
+rm -rf obj/Release
+make[1]: Leaving directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+   dh_clean
+ dpkg-source -b check-network-1.0
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building check-network using existing ./check-network_1.0.orig.tar.gz
+dpkg-source: info: building check-network in check-network_1.0-1.debian.tar.xz
+dpkg-source: info: building check-network in check-network_1.0-1.dsc
+ debian/rules build
+dh build
+   dh_testdir
+   dh_auto_configure
+   dh_auto_build
+make[1]: Entering directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+test -d bin/Debug || mkdir -p bin/Debug
+test -d obj/Debug || mkdir -p obj/Debug
+g++ -Wall -fexceptions -std=c++11 -g  -c main.cpp -o obj/Debug/main.o
+g++  -o bin/Debug/check_network obj/Debug/main.o   
+test -d bin/Release || mkdir -p bin/Release
+test -d obj/Release || mkdir -p obj/Release
+g++ -Wall -fexceptions -std=c++11 -O2  -c main.cpp -o obj/Release/main.o
+g++  -o bin/Release/check_network obj/Release/main.o   -s 
+test -d debian/check-network/usr/bin || mkdir -p debian/check-network/usr/bin
+test -d obj/Release || mkdir -p obj/Release
+g++  -o debian/check-network/usr/bin/check_network obj/Release/main.o   -s 
+make[1]: Leaving directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_installdirs
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+/usr/bin/make DESTDIR=$(pwd)/debian/check-network prefix=/usr install
+make[2]: Entering directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+test -d debian/check-network/usr/bin || mkdir -p debian/check-network/usr/bin
+test -d obj/Release || mkdir -p obj/Release
+test -d bin/Release || mkdir -p bin/Release
+test -d obj/Release || mkdir -p obj/Release
+g++  -o debian/check-network/usr/bin/check_network obj/Release/main.o   -s 
+make[2]: Leaving directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+make[1]: Leaving directory '/home/zell/Documents/Code/check_network_pkg/check-network-1.0'
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_compress
+   dh_fixperms
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package `check-network' in `../check-network_1.0-1_amd64.deb'.
+ dpkg-genchanges  >../check-network_1.0-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build check-network-1.0
+dpkg-buildpackage: full upload (original source is included)
+Now running lintian...
+W: check-network source: ancient-standards-version 3.9.2 (current is 3.9.6)
+W: check-network: hardening-no-relro usr/bin/check_network
+W: check-network: new-package-should-close-itp-bug
+W: check-network: binary-without-manpage usr/bin/check_network
+Finished running lintian.
